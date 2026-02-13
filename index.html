@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jyoti Electronics — TV Repair & Services</title>
+
+  <meta name="description"
+        content="Jyoti Electronics — TV fitting, repair, second-hand TVs, home service. Pawar Complex, Vegetable Market, Shop No.2" />
+
+  <meta name="theme-color" content="#0b6cff" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">J</div>
+      <div>
+        <h1>Jyoti Electronics</h1>
+        <div class="small">TV Repair • Fitting • Home Service</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#tvs">Second-hand TVs</a>
+      <a href="#book">Book Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="lead">
+    <h2>Your Trusted Partner for TV & Electronic Solutions</h2>
+    <p class="lead-p">
+      Fast TV fitting, trusted repair, and reliable home service in Pawar Complex, Vegetable Market.
+    </p>
+    <div class="cta">
+      <button class="btn" onclick="scrollToBook()">Book a Service</button>
+      <a class="btn alt" href="#tvs">View Second-hand TVs</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Quick Services</h3>
+    <div class="services">
+      <div class="service-item">
+        <strong>TV Fitting & Mounting</strong>
+        <button class="btn" onclick="openBookPref('TV Fitting & Mounting')">Book</button>
+      </div>
+      <div class="service-item">
+        <strong>TV Repairing</strong>
+        <button class="btn" onclick="openBookPref('TV Repairing')">Book</button>
+      </div>
+      <div class="service-item">
+        <strong>Home Visit / On-site Service</strong>
+        <button class="btn" onclick="openBookPref('Home Visit / On-site Service')">Book</button>
+      </div>
+      <div class="service-item">
+        <strong>Accessories & Installation</strong>
+        <button class="btn" onclick="openBookPref('Accessories & Installation')">Book</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK SERVICE -->
+<section id="book" style="margin-top:26px">
+  <h3>Book a Service</h3>
+  <div class="card">
+    <form onsubmit="return submitForm(event)">
+      <label>Name</label>
+      <input id="name" required placeholder="Your name">
+
+      <label>Phone</label>
+      <input id="phone" required placeholder="10-digit phone number">
+
+      <label>Service</label>
+      <select id="serviceType">
+        <option>TV Fitting & Mounting</option>
+        <option>TV Repairing</option>
+        <option>Home Visit / On-site Service</option>
+        <option>Accessories & Installation</option>
+      </select>
+
+      <label>Address</label>
+      <textarea id="address" rows="2" placeholder="Full address"></textarea>
+
+      <label>Preferred Date & Time</label>
+      <input id="ptime" placeholder="e.g., 10 Oct, morning">
+
+      <button class="btn" style="margin-top:10px">
+        Send via WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="margin-top:26px">
+  <h3>Contact & Location</h3>
+
+  <div class="card contact-grid">
+    <div>
+      <p><strong>Address:</strong> Pawar Complex, Vegetable Market, Shop No. 2</p>
+      <p><strong>Phone:</strong> 9850401436 / 9881034737</p>
+      <p><strong>Email:</strong> Jyotilectronics@gmail.com</p>
+      <p><strong>Timings:</strong> 9 AM – 9 PM</p>
+
+      <div style="margin-top:10px">
+        <a class="btn" href="https://maps.app.goo.gl/NN8cwh1SiPgkqFg28" target="_blank">
+          Open in Google Maps
+        </a>
+      </div>
+    </div>
+
+    <!-- CLICKABLE MAP -->
+    <div class="map-box map-clickable">
+      <iframe
+        src="https://www.google.com/maps?q=Pawar%20Complex%20Vegetable%20Market&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+      <!-- Overlay link -->
+      <a
+        href="https://maps.app.goo.gl/NN8cwh1SiPgkqFg28"
+        target="_blank"
+        aria-label="Open location in Google Maps">
+      </a>
+
+      <div class="map-hint">Tap to open Google Maps</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="small">© <span id="year"></span> Jyoti Electronics</div>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
